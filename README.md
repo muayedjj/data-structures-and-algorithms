@@ -11,7 +11,7 @@
 
 | Day/Date | Subject | Resources | Remarks |
 | -------- | ------- | --------- | ------- |
-| Class 1, May 30th 2022 | Python, Whiteboard Technology | Resources | [Documentation](./Pages/Class%201/reverse-array.md) |
-| -- | -- | -- | -- |
+| Class 1, May 29th 2022 | Python, Whiteboard | Resources | [Documentation](./Documentation/reverse_array/reverse_array.md) |
+| Class 2, May 31st 2022 | Python, Whiteboard | Resources | [Documentation](./Documentation/array_insert_shift/array_insert_shift.md) |
 | -- | -- | -- | -- |
 | -- | -- | -- | -- |

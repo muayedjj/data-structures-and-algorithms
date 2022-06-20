@@ -14,7 +14,7 @@ A function called `linked_list_zip` which takes in two linked lists and merges t
 
 ## Whiteboard Process
 
-![whiteboard photo](--------)
+![whiteboard photo](./Documentation/lists_zipper.PNG)
 
 ## Approach & Efficiency
 

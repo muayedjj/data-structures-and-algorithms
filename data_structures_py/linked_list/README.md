@@ -23,6 +23,6 @@ Create a Node class that has properties for the value stored in the Node, and a 
 - 
 
 ## Solution
-[code](./linked_list.py)
+[code](linkedlist.py)
 
 [test](../tests/test_linked_list.py)

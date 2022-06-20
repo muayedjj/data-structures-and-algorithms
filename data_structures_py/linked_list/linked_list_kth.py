@@ -2,17 +2,15 @@ class Node:
     """
     Node creator
     """
-
-    def __init__(self, value, next=None):
+    def __init__(self, value=None, next=None):
         self.value = value
         self.next = next
 
 
-class Linked_List:
+class LinkedList:
     """
     Node Navigator and Modifier
     """
-
     def __init__(self, head=None):
         self.head = head
 
@@ -20,7 +18,6 @@ class Linked_List:
         """
          Node finder
         """
-
         current = self.head
         while current is not None:
             if value == current.value:
@@ -32,13 +29,15 @@ class Linked_List:
         """
          Node pusher
         """
-
         node = Node(value)
         if self.head is not None:
             node.next = self.head
         self.head = node
 
     def __str__(self):
+        if self.head is None:
+            print('This List is Empty')
+            return
         current = self.head
         string = ""
         while current is not None:

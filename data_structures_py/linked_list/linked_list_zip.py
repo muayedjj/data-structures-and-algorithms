@@ -38,8 +38,8 @@ def zip_lists(list_1, list_2):
 
         return list_2
 
-
-
+    # def __str__(lin_lst):
+    #     return f'{lin_lst}'
 
     # curr_1 = list_1.head
     # curr_2 = list_2.head

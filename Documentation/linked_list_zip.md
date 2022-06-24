@@ -14,7 +14,7 @@ A function called `linked_list_zip` which takes in two linked lists and merges t
 
 ## Whiteboard Process
 
-![whiteboard photo](./Documentation/lists_zipper.PNG)
+![whiteboard photo](./zip_lists.png)
 
 ## Approach & Efficiency
 
@@ -26,7 +26,9 @@ The Linked lists are looped through while:
 - ignoring the second list if the head.next poiner equals None.
 - ignoring the first list if the head.next poiner equals None.
 
-- Big O for space is **O(1)**, because no new lists are created, and the variables used are constand in number
+
+### Big oh
+- Big O for space is **O(1)**, because no new lists are created, and the variables used are constant in number
   regardless of the number of nodes in either list.
 - Bog O for time for this approach is **O(N)**, because an increasing (linearly) amount of time is needed the more nodes
   the inputs have.

@@ -19,6 +19,7 @@ class Node(ABC):
         """
         pass
 
+
 class LinkedList:
     """
     Linked List Initiator, Node Navigator and Modifier, and then some more
@@ -88,7 +89,7 @@ class LinkedList:
 
     def __str__(self):
         """
-         List Displayer
+         List Displayer (For Built-in Print())
          This method iterates through the nodes of the Linked List and returns it as a string of nones.
          Args: None
          output:
@@ -102,6 +103,23 @@ class LinkedList:
             string += "{ " + f"{current.value}" + " }" + " -> "
             current = current.next
         return string + "NULL"
+
+    def __repr__(self):
+        """
+         List Displayer (For Interpreter)
+         This method iterates through the nodes of the Linked List and returns it as a string of nones.
+         Args: None
+         output:
+            1. The Linked List as a string of Node Values in the form of
+               "{ a } -> { b } -> { c } -> NULL"
+        """
+
+        current = self.head
+        string = ""
+        while current is not None:
+            string += "{ " + f"{current.value}" + " }" + " -> "
+            current = current.next
+        return repr(string) + "NULL"
 
     def append(self, value):
         """
@@ -152,6 +170,30 @@ class LinkedList:
         raise Exception(f"{{value}} Node non-existent, sorry")
 
 
+#
+# def if_palindrome(lin_lst):
+#     """
+#     A work in progress
+#     Should take a linked list and output a boolean value indicating whether it resembles a palindrome or not
+#     """
+#     val = []
+#
+#     curr = lin_lst.head
+#     nxt = lin_lst.head.next
+#
+#     if lin_lst.head.value is None and nxt is None:
+#         raise Exception('Error! List is Empty')
+#
+#     if lin_lst.head.value is not None and nxt is None:
+#         return True
+#
+#     while nxt is not None:
+#         current = current.next
+#
+#     if val == val[::-1]:
+#         return True
+#
+
 if __name__ == "__main__":
     list_one = LinkedList()
     list_one.append('A')
@@ -159,10 +201,15 @@ if __name__ == "__main__":
     list_one.append('C')
     list_one.append('D')
     list_one.append('E')
+    #
+    # print(list_one.get(0))
+    # print(list_one.get(4))
+    # print(list_one.length())
+    # print(list_one.__str__())
+    # print(list_one.includes(4))
+    # print(list_one.includes('C'))
+    #
+    # print(str(list_one))
+    # print(repr(list_one))
 
-    print(list_one.get(0))
-    print(list_one.get(4))
-    print(list_one.length())
-    print(list_one.__str__())
-    print(list_one.includes(4))
-    print(list_one.includes('C'))
+    print(if_palindrome(list_one))

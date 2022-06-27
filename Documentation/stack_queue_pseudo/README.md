@@ -57,8 +57,8 @@ of the original/input list is, and compare the key with the item at that index.)
 
 ## **`The Code`**
 
-### [**`Code`**](C:\Users\MOHAM\data-structures-and-algorithms\data_structures_py\linked_list\stack_queue_pseudo.py)
+### [**`Code`**](../../data_structures_py/linked_list/stack_queue_pseudo.py)
 
-### [**`Tests`**](C:\Users\MOHAM\data-structures-and-algorithms\data_structures_py\tests\test_stack_queue_pseudo.py)
+### [**`Tests`**](../../data_structures_py/tests/test_stack_queue_pseudo.py)
 
 

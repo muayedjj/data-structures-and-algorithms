@@ -26,14 +26,14 @@ class Stack:
 
     def pop(self):
         if self.is_empty():
-            raise Exception('Error! Empty Stack')
+            raise Exception('Error!')
         val = self.top.value
         self.top = self.top.next
         return val
 
     def peek(self):
         if self.is_empty():
-            raise Exception('Error! Empty Stack')
+            raise Exception('Error!')
         else:
             return self.top.value
 
@@ -60,14 +60,14 @@ class Queue:
 
     def dequeue(self):
         if self.is_empty():
-            raise Exception('Error! Empty Queue')
+            raise Exception('Error!')
         val = self.front.value
         self.front = self.front.next
         return val
 
     def peek(self):
         if self.is_empty():
-            raise Exception('Error! Empty Queue')
+            raise Exception('Error!')
         return self.front.value
 
     def is_empty(self):

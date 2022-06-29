@@ -2,25 +2,24 @@ class Animal:
     """
     Animal instantiator
     """
-
     def __init__(self, typ: str = None, next=None):
-        self.typ = typ
+        self.value = typ
         self.next = next
 
-    def cat(self):
-        self.typ = 'cat'
-        return self.typ
+    # def cat(self):
+    #     self.value = 'cat'
+    #     return self.value
+    #
+    # def dog(self):
+    #     self.value = 'dog'
+    #     return self.value
 
-    def dog(self):
-        self.typ = 'dog'
-        return self.typ
+
 
 class AnimalShelter(Animal):
     """
     Animal Queuer
     """
-    cat = Animal().cat()
-    dog = Animal().dog()
 
     def __init__(self, front=None, back=None):
         self.front = front
@@ -28,59 +27,50 @@ class AnimalShelter(Animal):
 
     def enqueue(self, animal):
         if self.front is None:
-            self.front = Animal(animal)
+            self.front = animal
         else:
-            self.back = Animal(animal)
+            self.back = animal
             self.front.next = self.back
 
     def dequeue(self, pref):
-        if pref == 'cat':
+        if pref == 'cat' or pref == 'dog':
             if self.front is None:
                 raise Exception('error')
-            val = self.front.typ
+            val = self.front.value
             self.front = self.front.next
             return val
-        elif pref == 'dog':
-            if self.front is None:
-                raise Exception('error')
-            val = self.front.typ
-            self.front = self.front.next
-            return val
+
         else:
             return 'null'
-"""
-    def peek(self):
-        if self.is_empty():
-            raise Exception('Error!')
-        return self.front.value
-
-    def is_empty(self):
-        return self.front is None
-"""
 
 
 if __name__ == "__main__":
     shelter = AnimalShelter()
-    ct = Animal()
-    c = ct.cat()
+    cat1 = Animal('cat')
+    dog1 = Animal('dog')
+    dog2 = Animal('dog')
+    cat2 = Animal('cat')
+
+    # print(dog1.value)
+    # c = ct.cat()
     dg = Animal()
-    d = dg.dog()
-    shelter.enqueue(d)
-    shelter.enqueue(d)
-    shelter.enqueue(c)
-    shelter.enqueue(d)
-    shelter.enqueue(c)
-    # print(c)
-    # print(Animal('cat').typ)
-    print(shelter.dequeue(Animal('dog').typ))
-    print(shelter.dequeue(Animal('dog').typ))
-    print(shelter.dequeue(Animal('dog').typ))
+    # d = dg.dog()
+    shelter.enqueue(cat1)
+    shelter.enqueue(dog1)
+    shelter.enqueue(dog2)
+    shelter.enqueue(cat2)
+    print(shelter.dequeue('cat'))
+    print(shelter.dequeue('dog'))
+    print(shelter.dequeue('dog'))
 
-    # print(shelter.dequeue(d))
-    # print(shelter.dequeue(c))
-    # print(shelter.dequeue(d))
-    # print(shelter.dequeue(c))
-
+    # shelter.enqueue(c)
+    # # print(c)
+    # # print(Animal('cat').typ)
+    # print(shelter.dequeue(Animal('dog').value))
+    # print(shelter.dequeue(Animal('dog').value))
+    # print(shelter.dequeue(Animal('dog').value))
+    #
+    # # print(shelter.dequeue(d))
 
     # print(str(shelter.dog))
     # print(shelter.dequeue(dg))

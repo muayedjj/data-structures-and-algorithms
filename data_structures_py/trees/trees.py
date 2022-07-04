@@ -18,7 +18,7 @@ class Node:
         self.next = None
 
 
-class Tree:
+class BinaryTree:
     def __init__(self, root=None):
         self.root = root
 
@@ -114,8 +114,38 @@ class Tree:
         _walk(self.root)
         return output
 
+    def find_maximum_value(self):
+        """
+        This function is meant to be called on a binary tree to the find maximum value in that tree object
+        Arguments: none
+        Returns: number
+        """
 
-class BinarySearchTree(Tree):
+        if not self.root:
+            self.root = TNode()
+            return self.root
+
+        temp = self.root
+
+        def _walk(root):
+            nonlocal temp
+
+            if root.left:
+                if root.left.value > temp.value:
+                    temp.value = root.left.value
+                _walk(root.left)
+
+            if root.right:
+                if root.right.value > temp.value:
+                    temp.value = root.right.value
+                _walk(root.right)
+
+        _walk(self.root)
+
+        return temp.value
+
+
+class BinarySearchTree(BinaryTree):
     def add(self, value=None):
         """
         Arguments: value
@@ -268,27 +298,18 @@ if __name__ == "__main__":
     bst.add(59)
     """
 
+    bst = BinaryTree()
+    # bst.root = TNode(10)
+    # bst.root.left = TNode(50)
+    # bst.root.right = TNode(150)
+    # bst.root.left.left = TNode(1)
+    # bst.root.left.right = TNode(7)
+    # bst.root.right.left = TNode(12)
+    # bst.root.right.right = TNode(100)
+
+    print(bst.find_maximum_value().__repr__())
+
     """
-    bst = BinarySearchTree()
-    bst.root = TNode(10)
-    bst.root.left = TNode(5)
-    bst.root.right = TNode(15)
-    bst.root.left.left = TNode(1)
-    bst.root.left.right = TNode(7)
-    bst.root.right.left = TNode(12)
-    bst.add(20)
-    bst.add(19)
-    bst.add(11)
-
-    print(bst.contains(0))
-
-    print(bst.contains(11))
-    print(bst.pre_order())
-    print(bst.contains(500))
-
-    print(bst.contains(7))
-    """
-
     tree = BinarySearchTree()
     tree.root = TNode('A')
     tree.root.left = TNode('B')
@@ -298,3 +319,4 @@ if __name__ == "__main__":
     tree.root.right.left = TNode('F')
     tree.root.right.right = TNode('G')
     print(tree.contains())
+    """

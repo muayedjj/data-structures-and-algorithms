@@ -212,4 +212,4 @@ if __name__ == "__main__":
     # print(str(list_one))
     # print(repr(list_one))
 
-    print(if_palindrome(list_one))
+    # print(if_palindrome(list_one))

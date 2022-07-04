@@ -1,5 +1,5 @@
 import pytest
-from data_structures_py.trees.trees import BinarySearchTree, TNode, Tree
+from data_structures_py.trees.trees import BinarySearchTree, TNode, BinaryTree
 
 
 def test_instantiate():
@@ -10,13 +10,13 @@ def test_instantiate():
 
 
 def test_ins_single():
-    bst = Tree(20)
+    bst = BinaryTree(20)
     # bs = BinarySearchTree(bst)
     assert bst.root == 20
 
 
 def test_left_right():
-    t = Tree(2)
+    t = BinaryTree(2)
     bst = BinarySearchTree(t)
 
     bst.root.left = 1
@@ -26,7 +26,7 @@ def test_left_right():
 
 
 def test_pre_order():
-    tree = Tree()
+    tree = BinaryTree()
     tree.root = TNode('A')
     tree.root.left = TNode('B')
     tree.root.right = TNode('C')
@@ -41,7 +41,7 @@ def test_pre_order():
 
 
 def test_in_order():
-    tree = Tree()
+    tree = BinaryTree()
     tree.root = TNode('A')
     tree.root.left = TNode('B')
     tree.root.right = TNode('C')
@@ -56,7 +56,7 @@ def test_in_order():
 
 
 def test_post_order():
-    tree = Tree()
+    tree = BinaryTree()
     tree.root = TNode('A')
     tree.root.left = TNode('B')
     tree.root.right = TNode('C')
@@ -132,3 +132,19 @@ def test_add_multiple_further():
     actual = bst.contains(19) and bst.contains(7)
     expected = True
     assert actual == expected
+
+
+def test_find_maximum_value():
+    bt = BinaryTree()
+    bt.root = TNode(10)
+    bt.root.left = TNode(50)
+    bt.root.right = TNode(150)
+    bt.root.left.left = TNode(1)
+    bt.root.left.right = TNode(7)
+    bt.root.right.left = TNode(12)
+    bt.root.right.right = TNode(100)
+
+    actual = bt.find_maximum_value()
+    expected = 150
+    assert actual == expected
+

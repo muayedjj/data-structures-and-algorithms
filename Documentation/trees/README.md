@@ -2,30 +2,34 @@
 
 # **Data Structures: Trees**
 
-## Code Challenge 15
+## Code Challenge 15-16
 
 ## Problem Domain: Implementation of Trees
 
-Node
+### Code challenge 15: **`add()`** & **`contains()`**
+
+1. **Node**
 Create a Node class that has properties for the value stored in the node, the left child node, and the right child node.
 Binary Tree
 Create a Binary Tree class
 Define a method for each of the depth first traversals:
-pre order
-in order
-post order which returns an array of the values, ordered appropriately.
-Binary Search Tree
+- pre-order
+- in order
+- post order which returns an array of the values, ordered appropriately.
+
+2. **Binary Search Tree**
 Create a Binary Search Tree class
 This class should be a sub-class (or your languages equivalent) of the Binary Tree Class, with the following additional methods:
-Add
-Arguments: value
-Return: nothing
-Adds a new node with that value in the correct location in the binary search tree.
-Contains
-Argument: value
-Returns: boolean indicating whether or not the value is in the tree at least once.
-Structure and Testing
-Utilize the Single-responsibility principle: any methods you write should be clean, reusable, abstract component parts to the whole challenge. You will be given feedback and marked down if you attempt to define a large, complex algorithm in one function definition.
+- Add
+   - Arguments: value
+   - Return: nothing
+   Adds a new node with that value in the correct location in the binary search tree. 
+
+- Contains
+  - Argument: value
+  Returns: boolean indicating whether the value is in the tree at least once.
+  Structure and Testing
+  Utilize the Single-responsibility principle: any methods you write should be clean, reusable, abstract component parts to the whole challenge. You will be given feedback and marked down if you attempt to define a large, complex algorithm in one function definition.
 
 Be sure to follow your language/frameworks standard naming conventions (e.g. C# uses PascalCasing for all method and class names).
 
@@ -41,11 +45,21 @@ Can successfully return a collection from an inorder traversal
 Can successfully return a collection from a postorder traversal
 Returns true or false for the contains method, given an existing or non-existing node value
 
+### Code challenge 16: **`find_maximum_value()`**
+
+Define a function, `find_maximum_value()` that is meant to be called on a binary tree to the find maximum
+value in that tree object.
+- Arguments: none
+- Returns: number
+
 ## Whiteboard Process
 
-Not required this time
+![find_max_method](./find_max_value.png)
 
 ## Approach & Efficiency
+
+### Code challenge 15: **`add()`** & **`contains()`**
+
 _Keeping it simple, multiple classes and methods are implemented in order to handle different tasks._
 Create a `Node` class that has properties for the value stored in the node, the left child node, and the right child node
 Create a Binary `Tree` class
@@ -57,10 +71,26 @@ location in the binary search tree.
 Define a method named `contains` that accepts a value, and returns a boolean indicating 
 whether the value is in the tree at least once.
 
+### Code challenge 16: **`find_maximum_value()`**
+
+Define `find_maximum_value()` method to _methodically_ traverse through the nodes of the tree comparing values
+with that of the root, and assigning any that are greater to a temporary object until all the nodes are 
+checked, finally returning the last value assigned the temporary placeholder.
+
+
 ### Big (O)
 
-- **Performance** => **O(N)** for _both inserting a new node and searching_ for a specific node.
-- **Space** => **O(W)** for _node insertion_ only, where `W` is the largest width of the tree.
+- **Performance** =>
+    - For `add()` method: **O(N)** for _node insertion_. (log N for most cases, but O(N) for the worst case scenario)
+    - For `contains()` method: **O(N)**
+    - For `find_maximum_value()` method: **O(N)**
+  
+
+- **Space** => 
+    - For `add()` method: **O(N)** for _node insertion_.
+    - For `contains()` method: **O(1)** for _searching_ for a specific node. (The only space needed is for method objects)
+    - For `find_maximum_value()` method: **O(1)** for _searching_ for a specific node. (The only space needed is for method objects)
+
 
 [//]: # ( using a *`While`* Loop & *`If-elif-else`* statements)
 

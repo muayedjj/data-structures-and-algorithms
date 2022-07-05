@@ -52,9 +52,15 @@ value in that tree object.
 - Arguments: none
 - Returns: number
 
+#
+
 ## Whiteboard Process
 
+### Code challenge 15: **`add()`** & **`contains()`**
+
 ![find_max_method](./find_max_value.png)
+
+# 
 
 ## Approach & Efficiency
 
@@ -82,8 +88,8 @@ checked, finally returning the last value assigned the temporary placeholder.
 
 - **Performance** =>
     - For `add()` method: **O(N)** for _node insertion_. (log N for most cases, but O(N) for the worst case scenario)
-    - For `contains()` method: **O(N)**
-    - For `find_maximum_value()` method: **O(N)**
+    - For `contains()` method: **O(N)**.
+    - For `find_maximum_value()` method: **O(N)**.
   
 
 - **Space** => 

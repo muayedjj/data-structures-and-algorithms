@@ -297,17 +297,17 @@ if __name__ == "__main__":
     bst.add(65)
     bst.add(59)
     """
-
-    bst = BinaryTree()
-    # bst.root = TNode(10)
-    # bst.root.left = TNode(50)
-    # bst.root.right = TNode(150)
-    # bst.root.left.left = TNode(1)
-    # bst.root.left.right = TNode(7)
-    # bst.root.right.left = TNode(12)
-    # bst.root.right.right = TNode(100)
-
-    print(bst.find_maximum_value().__repr__())
+    #
+    # bst = BinaryTree()
+    # # bst.root = TNode(10)
+    # # bst.root.left = TNode(50)
+    # # bst.root.right = TNode(150)
+    # # bst.root.left.left = TNode(1)
+    # # bst.root.left.right = TNode(7)
+    # # bst.root.right.left = TNode(12)
+    # # bst.root.right.right = TNode(100)
+    #
+    # print(bst.find_maximum_value().__repr__())
 
     """
     tree = BinarySearchTree()

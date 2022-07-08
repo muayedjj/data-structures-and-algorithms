@@ -1,4 +1,4 @@
-from data_structures_py.trees.trees import BinaryTree, TNode, Queue, Node
+# from data_structures_py.trees.trees import BinaryTree, TNode, Queue, Node
 
 
 class KTNode:
@@ -27,10 +27,12 @@ class KaryTree:
 
 
 def fizz_buzz_tree(kary_tree):
-    def traverse(node):
-        if node.children:
-            for child in node.children:
-                node.value = str(node.value)
+    copy = kary_tree
+
+    def traverse(root):
+        if root.children:
+            for child in root.children:
+                root.value = str(root.value)
                 if child.value % 3 == 0 and child.value % 5 == 0:
                     child.value = "FizzBuzz"
                 elif child.value % 3 == 0:
@@ -40,12 +42,14 @@ def fizz_buzz_tree(kary_tree):
                 else:
                     child.value = str(child.value)
 
-    traverse(kary_tree.root)
+    return traverse(copy.root)
 
 
 if __name__ == "__main__":
     tree = KaryTree()
-    expected = ["FizzBuzz" if (i % 5 == 0 and i % 3 == 0) else "Fizz" if i % 3 == 0 else "Buzz" if i % 5 == 0 else str(i) for i in range(1, 30)]
+    expected = [
+        "FizzBuzz" if (i % 5 == 0 and i % 3 == 0) else "Fizz" if i % 3 == 0 else "Buzz" if i % 5 == 0 else str(i) for i
+        in range(1, 30)]
     print(expected)
     # tree.root = KTNode('A')
     # tree.root.left = KTNode('B')
@@ -66,4 +70,3 @@ if __name__ == "__main__":
     actual = k_tree.kary_tree_node_values()
 
     print(actual)
-

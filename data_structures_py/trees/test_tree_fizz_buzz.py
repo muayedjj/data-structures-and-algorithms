@@ -1,6 +1,6 @@
-import pytest
+# import pytest
 from data_structures_py.trees.tree_fizz_buzz import KaryTree, KTNode, fizz_buzz_tree
-from data_structures_py.trees.trees import BinaryTree, TNode, Queue, Node
+# from data_structures_py.trees.trees import BinaryTree, TNode, Queue, Node
 
 
 def test_fizzbuzz():

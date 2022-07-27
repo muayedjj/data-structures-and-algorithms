@@ -11,9 +11,13 @@ def insertion_sort(arr):
                 arr[j + 1] = arr[j]
                 j -= 1
             arr[j + 1] = chk
+    return arr
 
 
-arr_1 = [8, 4, 23, 42, 16, 15]
-arr_2 = []
-insertion_sort(arr_1)
-print(arr_1)
+if __name__ == "__main__":
+
+    arr_1 = [8, 4, 23, 42, 16, 15]
+    arr_2 = []
+    insertion_sort(arr_1)
+    print(arr_1)
+    print(insertion_sort(arr_2))

@@ -6,7 +6,7 @@
 
 ## Problem Domain: **Insertion Sort**
 
-### Write a functioning code as per the provided [pseudocode](../../../algorithms_py/sorting/insertion/blog.md:9)
+### Write a functioning code as per the provided [pseudocode](../../../algorithms_py/sorting/insertion/blog.md)
 
 
 ## Whiteboard Process

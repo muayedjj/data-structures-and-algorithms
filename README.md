@@ -27,6 +27,7 @@
 | Class 17, July 5th 2022    | Python, Trees - extended (breadth first)      | [Canvas Lab 17](https://canvas.instructure.com/courses/4839248/assignments/30188579) | [Documentation](./Documentation/trees_breadth_first/README.md)                |
 | Class 18, July -th 2022    | Python, Trees - extended (kary search)        | [Canvas Lab 18](https://canvas.instructure.com/courses/4839248/assignments/30188580) | [Documentation](./Documentation/tree_fizz_buzz/README.md)                     |
 | Class 26, July 24th 2022   | Python, Algorithms - Sorting (Insertion Sort) | [Canvas Lab 26](https://canvas.instructure.com/courses/4839248/assignments/30188582) | [Documentation](./Documentation/Algorithms/insertion_sort/insertion_sort.md)  |
-| Class 27, July 26th 2022   | Python, Algorithms - Sorting (Merge Sort)     | [Canvas Lab 26](https://canvas.instructure.com/courses/4839248/assignments/30188583) | [Documentation](./Documentation/Algorithms/merge_sort/merge_sort.md)          |
-| Class 28, July 28th 2022   | Python, Algorithms - Sorting (Quick Sort)     | [Canvas Lab 26](https://canvas.instructure.com/courses/4839248/assignments/30188584) | [Documentation](./Documentation/Algorithms/quick_sort/quick_sort.md)          |
+| Class 27, July 26th 2022   | Python, Algorithms - Sorting (Merge Sort)     | [Canvas Lab 27](https://canvas.instructure.com/courses/4839248/assignments/30188583) | [Documentation](./Documentation/Algorithms/merge_sort/merge_sort.md)          |
+| Class 28, July 28th 2022   | Python, Algorithms - Sorting (Quick Sort)     | [Canvas Lab 28](https://canvas.instructure.com/courses/4839248/assignments/30188584) | [Documentation](./Documentation/Algorithms/quick_sort/quick_sort.md)          |
+| Class 29, August 4th 2022  | Python, Data Structures - Hash TAbles         | [Canvas Lab 29](https://canvas.instructure.com/courses/4839248/assignments/30188586) | [Documentation](./Documentation/Hash Tables/hash_tables.md)                   |
 

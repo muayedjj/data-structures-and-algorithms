@@ -125,7 +125,7 @@ class HashTable:
         return False
 
         # if self.get(key):
-        #   return True
+        #     return True
         # return False
 
     def key(self):
@@ -133,3 +133,8 @@ class HashTable:
         this method will return a collections of all the keys in hashmap as an object
         """
         return self.__keys
+
+
+# map2 = HashTable()
+# b = map2.get.ll
+# print(b)

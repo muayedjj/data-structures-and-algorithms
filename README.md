@@ -29,5 +29,6 @@
 | Class 26, July 24th 2022   | Python, Algorithms - Sorting (Insertion Sort) | [Canvas Lab 26](https://canvas.instructure.com/courses/4839248/assignments/30188582) | [Documentation](./Documentation/Algorithms/insertion_sort/insertion_sort.md)  |
 | Class 27, July 26th 2022   | Python, Algorithms - Sorting (Merge Sort)     | [Canvas Lab 27](https://canvas.instructure.com/courses/4839248/assignments/30188583) | [Documentation](./Documentation/Algorithms/merge_sort/merge_sort.md)          |
 | Class 28, July 28th 2022   | Python, Algorithms - Sorting (Quick Sort)     | [Canvas Lab 28](https://canvas.instructure.com/courses/4839248/assignments/30188584) | [Documentation](./Documentation/Algorithms/quick_sort/quick_sort.md)          |
-| Class 29, August 4th 2022  | Python, Data Structures - Hash TAbles         | [Canvas Lab 29](https://canvas.instructure.com/courses/4839248/assignments/30188586) | [Documentation](./Documentation/Hash Tables/hash_tables.md)                   |
+| Class 30, August 4th 2022  | Python, Data Structures - Hash Tables         | [Canvas Lab 30](https://canvas.instructure.com/courses/4839248/assignments/30188586) | [Documentation](./Documentation/Hash Tables/hash_tables.md)                   |
+| Class 31, August 4th 2022  | Python, Data Structures - Hash Tables         | [Canvas Lab 31](https://canvas.instructure.com/courses/4839248/assignments/30188587) | [Documentation](./Documentation/Hash Tables/hashmap_repeated_word.md)         |
 

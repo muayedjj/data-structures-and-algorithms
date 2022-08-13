@@ -76,7 +76,7 @@ class HashTable:
         # hash_key = hash_key * 283
         # return hash_key % self.__size
 
-        return sum([ord(i) for i in key]) * 283 % self.__size
+        return sum([ord(i) for i in str(key)]) * 283 % self.__size
 
     def set(self, key, value):
         """

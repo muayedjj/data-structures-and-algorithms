@@ -1,6 +1,7 @@
-## Python 3
 
 # **Data Structures: Hash Tables, Binary Trees**
+
+## Python 3
 
 ## Code Challenge 32
 

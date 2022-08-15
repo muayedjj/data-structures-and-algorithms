@@ -3,9 +3,8 @@ from data_structures_py.hash_tables.hash_table import HashTable
 
 def left_join(ht1, ht2):
     output = []
-    k = 0
+
     for g in ht1.key():
-        k += 1
         if ht2.contains(g):
             output.append([g, ht1.get(g), ht2.get(g)])
 

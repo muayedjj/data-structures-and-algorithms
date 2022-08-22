@@ -1,13 +1,8 @@
-
-# **Data Structures: Hash Tables**
-
-## Python 3
-
-## Code Challenge 34 - 35
+# Code Challenge 35 - 36
 
 ## **Problem Domain: Graphs**
 
-## Code Challenge 34: Implementing a graph class
+### Code Challenge 34: Implementing a graph class
 
 > **Implement your own Graph. The graph should be represented as an adjacency list,\
 and should include the following methods:**
@@ -38,9 +33,9 @@ and should include the following methods:**
   - Returns the total number of nodes in the graph
 
 
-## Code Challenge 34: Extending implementation
+### Code Challenge 34: Extending implementation
 
-### Write the following method for the Graph class:
+> **Write the following method for the Graph class:**
 
 - **`breadth_first()`**
   - Arguments: Node
@@ -49,6 +44,8 @@ and should include the following methods:**
   - Structure and Testing
 
 ## **Whiteboard Process**
+
+![breadth_first_method](breadth_first.png)
 
 ## **Approach & Efficiency**
 

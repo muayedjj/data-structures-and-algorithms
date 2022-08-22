@@ -3,9 +3,11 @@
 
 ## Python 3
 
-## Code Challenge 34
+## Code Challenge 34 - 35
 
-## Problem Domain: Graphs
+## **Problem Domain: Graphs**
+
+## Code Challenge 34: Implementing a graph class
 
 > **Implement your own Graph. The graph should be represented as an adjacency list,\
 and should include the following methods:**
@@ -35,9 +37,20 @@ and should include the following methods:**
   - Arguments: none
   - Returns the total number of nodes in the graph
 
-#
 
-## Approach & Efficiency
+## Code Challenge 34: Extending implementation
+
+### Write the following method for the Graph class:
+
+- **`breadth_first()`**
+  - Arguments: Node
+  - Return: A collection of nodes in the order they were visited.
+  - Display the collection
+  - Structure and Testing
+
+## **Whiteboard Process**
+
+## **Approach & Efficiency**
 
 ### Big (O)
 
@@ -46,6 +59,8 @@ and should include the following methods:**
     - For `get_nodes()` method: **O(N)**.
     - For `add_edge()` method: **O(1)**.
     - For `get_neighbors()` method: **O(N)**.
+    - For `size()` method: **O(1)**.
+    - For `breadth_first()` method: **O(N)**, _worst case_, only if the graph is **connected**.
 
 [//]: # (    - For `breadth_first&#40;&#41;` method: **O&#40;N<sup>2</sup>&#41;**.)
 
@@ -54,6 +69,10 @@ and should include the following methods:**
     - For `get_nodes()` method: **O(N)**.
     - For `add_edge()` method: **O(N)**.
     - For `get_neighbors()` method: **O(N)**.
+    - For `size()` method: **O(1)**.
+    - For `breadth_first()` method: **O(N)**; as the space occupied by the output corresponds to the number of vertices.
+
+
 
 [//]: # (    - For `breadth_first&#40;&#41;` method: **O&#40;N&#41;**.)
 

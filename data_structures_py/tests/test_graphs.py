@@ -74,6 +74,13 @@ def test_empty():
     assert actual == expected
 
 
+def test_breadth_first(graph_1):
+    actual = graph_1[0].breadth_first(graph_1[2])
+    expected = ['D', 'A', 'C', 'E', 'B']
+
+    assert actual == expected
+
+
 @pytest.fixture
 def graph_1():
     g = Graph()
@@ -89,4 +96,4 @@ def graph_1():
     g.add_edge(c, d, 5)
     g.add_edge(d, e)
 
-    return [g, a]
+    return [g, a, d]

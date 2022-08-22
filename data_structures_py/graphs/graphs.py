@@ -79,31 +79,39 @@ class Graph:
         else:
             return self.__repr__()
 
+    def breadth_first(self, start_vertex):
+        """
+        Traversal method
+        A method that traverses a graph or the part of a graph that is directly or indirectly connected to a starting\
+        vertex (input), and returns the values of all values of the vertices traversed in a single python list, ord-\
+        ered by their levels of depth in respect to the input/starting vertex.
 
+        param: A vertix in a graph (start_vertex).
+        returns: A list (array) of the values of all vertices in the graph so long as they are not islands\
+        disconnected from the input (start_vertex).
+        """
+        result = []
+        visited = set()
+        q = Queue()
 
-    #
-    # def breadth_first(self, start_vertex):
-    #     result = []
-    #     visited = set()
-    #     q = Queue()
-    #
-    #     q.enqueue(start_vertex)
-    #     visited.add(start_vertex)
-    #
-    #     while len(q):
-    #         current_vertex = q.dequeue()
-    #
-    #         result.append(current_vertex.value)
-    #
-    #         neighbors = self.get_neighbors(current_vertex.value)
-    #
-    #         for edge in neighbors:
-    #             neighbor = edge.vertex
-    #             if neighbor not in visited:
-    #                 q.enqueue(neighbor)
-    #                 visited.add(neighbor)
-    #
-    #     return result
+        q.enqueue(start_vertex)
+        visited.add(start_vertex)
+
+        while len(q):
+            current_vertex = q.dequeue()
+
+            result.append(current_vertex.value)
+
+            neighbors = self.__adj_list.get(current_vertex)
+
+            for edge in neighbors:
+                neighbor = edge.vertex
+                if neighbor not in visited:
+                    q.enqueue(neighbor)
+                    visited.add(neighbor)
+
+        return result
+
 
 if __name__ == "__main__":
     g = Graph()
@@ -119,4 +127,4 @@ if __name__ == "__main__":
     g.add_edge(c, d, 5)
     g.add_edge(d, e)
 
-    print(g)
+    print(g.breadth_first(d))

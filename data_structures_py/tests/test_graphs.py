@@ -81,6 +81,13 @@ def test_breadth_first(graph_1):
     assert actual == expected
 
 
+def test_depth_first(graph_1):
+    actual = graph_1[0].depth_first(graph_1[1])
+    expected = ['A', 'B', 'C', 'D', 'E']
+
+    assert actual == expected
+
+
 @pytest.fixture
 def graph_1():
     g = Graph()

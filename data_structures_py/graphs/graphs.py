@@ -14,6 +14,15 @@ class Queue:
     def __len__(self):
         return len(self.dq)
 
+    def push(self, value):
+        return self.dq.append()
+
+    def pop(self):
+        return self.dq.pop()
+
+    def is_empty(self):
+        return False if len(self.dq) else True
+
 
 class Vertex:
     def __init__(self, value):
@@ -111,6 +120,60 @@ class Graph:
                     visited.add(neighbor)
 
         return result
+
+    def depth_first(self, start):
+        """
+        Arguments: Node/Vertex (Starting point of search)
+        Return: A collection of nodes in their pre-order depth-first traversal order
+        Program output: Display the collection
+        """
+        if not start:
+            return Exception('Please provide a starting vertex (root)')
+
+        def pre_order(vertex, visited=None, vertices=None):
+
+            if vertices is None:
+                vertices = []
+
+            if visited is None:
+                visited = set()
+
+            if vertex in visited:
+                return vertices
+
+            visited.add(vertex)
+
+            vertices.append(vertex.value)
+
+            neighbors = self.__adj_list[vertex]
+
+            for neighbor in neighbors:
+                pre_order(neighbor.vertex, visited, vertices)
+
+            return vertices
+
+        return pre_order(start)
+
+        # ----------------------
+        # if not start.value:
+        #     return start
+        #
+        # stack = Queue()
+        # stack.push(start)
+        #
+        # output = []
+        # while not stack.is_empty():
+        #     top = stack.pop()
+        #     output.append(top.value)
+        #
+        #     if top.right:
+        #         stack.push(top.right)
+        #
+        #     if top.left:
+        #         stack.push(top.left)
+        # return output
+        #
+        # pass
 
 
 if __name__ == "__main__":
